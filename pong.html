@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Pong</title>
+    <link href="style.css" rel="stylesheet" />
+    <!--Because Roboto is awesome.-->
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <script src="Libraries/jQuery/jQuery.min.js"></script>
+    <script src="Libraries/jQuery_UI/jQuery-ui.min.js"></script>
+    <script src="misc.js"></script>
+  </head>
+
+  <body>
+    <p id="test"><strong>Instructions:</strong> left paddle is controlled with E/D; right paddle is controlled with I/K. Click to pause/play.</p>
+    <canvas id="canvas" height="500px" width="800px" style="border: 4px solid #666666; background: lightgrey; margin: auto"></canvas>
+    <div id="controlPanel" title='Click "Scores" to show settings, click player names to edit them.'>
+      <table id="scoreBoard">
+        <th colspan="2"><span id="showSettings" title="Show settings">Scores</span></th>
+        <tr>
+          <th class="player" id="computer" title="Edit name">Player 1</th>
+          <th class="player" id="user" title="Edit name">Player 2</th>
+        </tr>
+        <tr>
+          <td class="score" id="opponentScore">0</td>
+          <td class="score" id="userScore">0</td>
+        </tr>
+      </table>
+      <div id="settings">
+        <div class="options " id="changeTheme" title="Change the color theme">Color theme: <span id="currentTheme">grey</span></div>
+        <div class="options " id="toggleShadow" title="Toggle shadows on or off (not recommended if the color theme is grey)">Shadows: <span id="shadowBool">not shown</span></div>
+        <div class="options " id="allowCheats" title="Turn this off if you don't like the special effects">Special effects: <span id="cheatsBool">allowed</span></div>
+
+        <div class="options " id="toggle1p" title="Turn this on if you want to play by yourself">Singleplayer: <span id="1pBool">off</span></div>
+        <div id="done">Done</div>
+      </div>
+    </div>
+    <script src="pong.js"></script>
+  </body>
+
+</html>
